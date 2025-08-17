@@ -418,8 +418,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     async function getAIResponse(message, precise = false) {
         // اینجا باید آدرس API واقعی و کلید API خود را قرار دهید
-        const API_URL = 'https://api.together.xyz/v1/chat/completions';
-        const API_KEY = 'tgp_v1_G1pfjhNvjm33bZyBkjG7dikaba658FK5MXH8cF2vu7M';
+        const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
+        const API_KEY = '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';
         
         try {
             const response = await fetch(API_URL, {
@@ -429,7 +429,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Authorization': `Bearer ${API_KEY}`
                 },
                 body: JSON.stringify({
-                    model: "Qwen/Qwen2-72B-Instruct",
+                    model: "openai/gpt-oss-20b:free",
                     messages: [
                         {
                             role: "system",
